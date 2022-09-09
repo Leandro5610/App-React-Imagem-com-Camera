@@ -1,15 +1,15 @@
 import React ,{ Component } from "react";
 import { Platform, StyleSheet, Text, View, Button,TouchableHighlight } from "react-native";
 
-import pictureList from "./app/components/pictureList";
-import cameraDialog
- from "./app/components/cameraDialog";
+import PictureList from "./app/components/PictureList";
+import CameraDialog from "./app/components/CameraDialog";
 export default class App extends Component{
 state={
    pictureList:[
-  {id:'1',url:'https://wall.alphacoders.com/big.php?i=1233948'},
-  {id:'2',url:'https://wall.alphacoders.com/big.php?i=1233948'},
-  {id:'3',url:'https://wall.alphacoders.com/big.php?i=1233948'}
+  {id:'1',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'},
+  {id:'2',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'},
+  {id:'2',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'}
+
 
 
 
@@ -27,14 +27,14 @@ openModal = () =>{
     const {state} = this;
     return(
       <View style={styles.container}>
-        <pictureList list={state.pictureList} onClick={this.onPictureSelect}/>
+        <PictureList list={state.pictureList} onClick={this.onPictureSelect}/>
         <View style={styles.footer}>
           <Button onPress={this.openModal}
           title="NovaFoto"
           color='#0062ac'
           />
         </View>
-        <cameraDialog isOpen={state.isModalOpen}/>
+        <CameraDialog isOpen={state.isModalOpen}/>
       </View>
     )
   }

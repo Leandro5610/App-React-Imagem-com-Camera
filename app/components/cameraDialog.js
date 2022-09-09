@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { StyleSheet, View, Image, Modal, TouchableOpacity, Text, Button } from "react-native";
 
-class cameraDialog extends Component{
+class CameraDialog extends Component{
 
     static defaultProps={
             isOpen: false
@@ -47,4 +47,4 @@ class cameraDialog extends Component{
         );
     }
 }
-export default cameraDialog
+export default CameraDialog;

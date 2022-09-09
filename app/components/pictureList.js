@@ -1,8 +1,8 @@
-import react,{Component} from "react";
+import React,{Component} from "react";
 import {View,Image,FlatList,TouchableHighlight} from 'react-native';
 
 
-class pictureList extends Component{
+class PictureList extends Component{
 
     static defaultProps = {
         list:[],
@@ -20,7 +20,7 @@ class pictureList extends Component{
                 <FlatList numColumns={3} 
                 data={props.list} 
                 keyExtractor={keyExtractor}
-                renderItem={({item}) => <PictureListItem onClick={props.onClick} item={item}/>}
+                renderItem={({item}) => <PictureListItem     onClick={props.onClick} item={item}/>}
                 />
             </View>
         );
@@ -51,4 +51,4 @@ function PictureListItem(props){
 }
 
 
-export default pictureList;
+export default PictureList;
