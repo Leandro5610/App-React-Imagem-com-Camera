@@ -6,9 +6,9 @@ import CameraDialog from "./app/components/CameraDialog";
 export default class App extends Component{
 state={
    pictureList:[
-  {id:'1',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'},
-  {id:'2',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'},
-  {id:'2',url:'https://i.pinimg.com/originals/d0/64/b3/d064b36ef3377254b0a8cf65c245e0fa.jpg'}
+  {id:'1',url:'https://i.pinimg.com/originals/0c/96/ed/0c96ed65f3799887864e2a133f597056.jpg'},
+  {id:'2',url:'https://i.pinimg.com/originals/0c/96/ed/0c96ed65f3799887864e2a133f597056.jpg'},
+  {id:'2',url:'https://i.pinimg.com/originals/0c/96/ed/0c96ed65f3799887864e2a133f597056.jpg'}
 
 
 
@@ -20,7 +20,10 @@ onPictureSelect = (item) =>{
 
 }
 openModal = () =>{
-
+  this.setState({isModalOpen:true})
+}
+closeModal =(response) =>{
+  this.setState({isModalOpen:false});
 }
 
   render(){
@@ -34,7 +37,7 @@ openModal = () =>{
           color='#0062ac'
           />
         </View>
-        <CameraDialog isOpen={state.isModalOpen}/>
+        <CameraDialog isOpen={state.isModalOpen} onClose={this.closeModal}/>
       </View>
     )
   }
