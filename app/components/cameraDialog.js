@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { StyleSheet, View, Image, Modal, TouchableOpacity, Text, Button, } from "react-native";
-
+import {Camera} from "./Camera"
 class CameraDialog extends Component{
 
     static defaultProps={
@@ -49,7 +49,7 @@ class CameraDialog extends Component{
                    
                         <Button
                         title="Bater"
-                        onPress={this.shot}
+                        onPress={() => <Camera></Camera>}
                         color="#0062ac"
                          />
                         <Button
